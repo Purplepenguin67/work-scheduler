@@ -49,7 +49,15 @@ $(document).ready(function () {
 
           //pull from local storage
           $("#hour1 .description").val(localStorage.getItem("hour1"));
-
+          $("#hour2 .description").val(localStorage.getItem("hour2"));
+          $("#hour3 .description").val(localStorage.getItem("hour3"));
+          $("#hour4 .description").val(localStorage.getItem("hour4"));
+          $("#hour5 .description").val(localStorage.getItem("hour5"));
+          $("#hour6 .description").val(localStorage.getItem("hour6"));
+          $("#hour7 .description").val(localStorage.getItem("hour7"));
+          $("#hour8 .description").val(localStorage.getItem("hour8"));
+        
+          clocktracker();
 
 
 

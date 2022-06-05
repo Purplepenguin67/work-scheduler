@@ -48,7 +48,7 @@ $(document).ready(function () {
           }
 
           //pull from local storage
-
+          $("#hour1 .description").val(localStorage.getItem("hour1"));
 
 
 

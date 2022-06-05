@@ -12,6 +12,36 @@ $(document).ready(function () {
 
             localStorage.setItem(time, input);
 
-}
 
 
+    function clock() {
+        var currenttime = moment().hour();
+        
+//hourly time slots
+
+    $(".time-block").each(function () {
+
+        var timeclock = parseInt($(this).attr("id").split("hour")[1]);
+//time of day checker
+        if(timeblock < timenow) {
+            $(this).removeclass("past");
+            $(this).removeclass("present");
+            $(this).addclass("future");
+        }
+
+        else if (blocktime === timenow){
+            $(this).removeclass("future");
+            $(this).addclass("past");
+            $(this).removeclass("present");
+            
+          }
+
+          else {
+            $(this).removeclass("future");
+            $(this).addclass("present");
+            $(this).removeclass("past");
+
+          }
+        })
+    }
+        

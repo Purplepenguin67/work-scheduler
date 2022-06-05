@@ -1,9 +1,13 @@
 //todays date and time in header
+
+
 var currentdate = moment().format('dddd, MMM Do YYYY');
 $("#currentDay").html(currentdate);
 
 
 $(document).ready(function () {
+    
+    
     $(".savebtn").on("click", function () {
         console.log(this);
             var input = $(this).siblings(".description").val();
@@ -11,11 +15,11 @@ $(document).ready(function () {
             var time = $(this).parent().attr("id");
 
             localStorage.setItem(time, input);
+    })
 
 
-
-    function clock() {
-        var currenttime = moment().hour();
+    function clocktracker() {
+        var timenow = moment().hour();
         
 //hourly time slots
 
@@ -42,6 +46,16 @@ $(document).ready(function () {
             $(this).removeclass("past");
 
           }
+
+          //pull from local storage
+
+
+
+
+
+
+
+
         })
     }
         

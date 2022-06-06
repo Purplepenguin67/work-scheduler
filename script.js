@@ -1,12 +1,17 @@
 //todays date and time in header
 
 
-var currentdate = moment().format('dddd, MMM Do YYYY');
-$("#currentDay").html(currentdate);
-
-
-$(document).ready(function () {
-    
+//date
+var mydate = new Date();
+var year =mydate.getFullYear();
+if(year < 1000){
+    year +=1900
+}
+var day = mydate.getDay();
+var month = mydate.getMonth();
+var daym = mydate.getDate();
+var dayarray = new Array("sunday", monday, tuesday, wednesday, thursday, friday, saturday);
+var montharray = new Array(january, febuary, march, april, may, june, july, august, september, october, november, decemeber)
     
     $(".savebtn").on("click", function () {
         console.log(this);
@@ -16,6 +21,7 @@ $(document).ready(function () {
 
             localStorage.setItem(time, input);
     })
+
 
 
     function clocktracker() {
@@ -46,6 +52,8 @@ $(document).ready(function () {
             $(this).removeclass("past");
 
           }
+            })
+            }
 
           //pull from local storage
           $("#hour1 .description").val(localStorage.getItem("hour1"));
@@ -59,11 +67,6 @@ $(document).ready(function () {
         
           clocktracker();
 
-
-
-
-
-
         })
-    }
+    
         

@@ -1,6 +1,6 @@
 //todays date and time in header
-
-
+const moment = require("moment");
+console.log(moment());
 var currentdate = moment().format('dddd, MMM Do YYYY');
 
 var today = new Date();
@@ -8,6 +8,12 @@ var dd = today.getDate();
 var mm= today.getMonth()+1;
 var yyyy= today.getfulltear();
 console.log(mm);
+
+var currentDay = moment().format("dddd LL");
+$("#currentDay").append(currentDay);
+
+var currentTime = moment().format("LT");
+$("#currentTime").append(currentTime);
 
 if(dd < 10 ){
         dd = '0' + dd;
